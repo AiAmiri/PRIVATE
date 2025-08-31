@@ -1,0 +1,29 @@
+
+asgiref==3.9.1
+certifi==2025.7.14
+cffi==1.17.1
+charset-normalizer==3.4.2
+cryptography==45.0.5
+dj-rest-auth==7.0.1
+Django==5.2.4
+django-allauth==65.10.0
+django-cors-headers==4.7.0
+django-filter==25.1
+djangorestframework==3.16.0
+idna==3.10
+Markdown==3.8.2
+mysqlclient==2.2.7
+oauthlib==3.3.1
+pycparser==2.22
+PyJWT==2.10.1
+PyMySQL==1.1.1
+requests==2.32.4
+requests-oauthlib==2.0.0
+sqlparse==0.5.3
+tzdata==2025.2
+urllib3==2.5.0
+Pillow==10.4.0
+python-decouple==3.8
+
+find your installed packages by running this command:
+pip freeze

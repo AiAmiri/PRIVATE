@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% load socialaccount %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMU Pay - Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="center">
+        <h1>AMU Pay Dashboard</h1>
+        <p>Welcome, {{request.user.username}}!</p>
+        
+        {% if user.is_authenticated %}
+            <div class="user-info">
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+                <p><strong>Login Method:</strong> 
+                    {% if user.socialaccount_set.all %}
+                        Google OAuth
+                    {% else %}
+                        Standard Login
+                    {% endif %}
+                </p>
+            </div>
+            
+            <div class="actions">
+                <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
